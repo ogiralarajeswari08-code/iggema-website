@@ -1,0 +1,94 @@
+.charter {
+  max-width: 1040px;
+  padding-top: 72px;
+  padding-bottom: 90px;
+}
+
+.charter-header {
+  max-width: 790px;
+  margin-bottom: 60px;
+}
+
+.charter-header .eyebrow { margin-bottom: 18px; }
+.charter-header h1 { margin-bottom: 20px; font-size: clamp(42px, 6vw, 68px); line-height: 1.08; }
+.charter-header h1 span { color: var(--green); font-family: var(--serif); font-style: italic; font-weight: 400; }
+.document-ref { margin-bottom: 18px; color: var(--green); font-size: 13px; }
+.charter-intro, .charter-section > p:not(.eyebrow) { color: #64736a; font-size: 14px; line-height: 1.9; }
+
+.charter-section {
+  margin-top: 44px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  background: rgba(255, 254, 250, .68);
+}
+
+.charter-section > .eyebrow { margin-bottom: 10px; color: #718078; }
+.charter-section h2 { margin: 0 0 22px; font-size: clamp(25px, 3.2vw, 34px); letter-spacing: -.045em; }
+.table-scroll { overflow-x: auto; overscroll-behavior-inline: contain; }
+.table-scroll:focus-visible { outline: 3px solid #819e5c; outline-offset: 3px; }
+
+.benefits-table, .fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #43564c;
+  font-size: 12px;
+  text-align: left;
+}
+
+.benefits-table { min-width: 850px; }
+.fees-table { min-width: 560px; }
+.benefits-table th, .benefits-table td, .fees-table th, .fees-table td { padding: 12px 13px; border-bottom: 1px solid #e5e6dd; }
+.benefits-table thead, .fees-table thead { background: #eeefe6; color: var(--ink); }
+.benefits-table thead th, .fees-table thead th { font-weight: 700; }
+.benefits-table tbody th, .fees-table tbody th { color: var(--ink); font-weight: 600; }
+.benefits-table tbody td { color: var(--green); text-align: center; }
+.benefits-table tbody tr:last-child th, .benefits-table tbody tr:last-child td,
+.fees-table tbody tr:last-child th, .fees-table tbody tr:last-child td { border-bottom: 0; }
+
+.fee-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0 0; }
+.fee-notes > div { padding: 16px; background: #eeefe6; }
+.fee-notes dt { margin-bottom: 7px; color: var(--ink); font-size: 12px; font-weight: 700; }
+.fee-notes dd { margin: 0; color: #64736a; font-size: 11px; line-height: 1.7; }
+
+.obligations-list { display: grid; gap: 16px; margin: 0; padding-left: 22px; color: #64736a; font-size: 13px; line-height: 1.85; }
+.obligations-list li { padding-left: 5px; }
+.obligations-list strong { color: var(--ink); }
+.charter-section > p a { color: var(--green); text-underline-offset: 3px; }
+.footer-bottom a { color: var(--green); text-decoration: none; }
+
+.join-membership {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 44px;
+  padding: 32px;
+  background: #eeefe6;
+}
+
+.join-membership .eyebrow { margin-bottom: 10px; }
+.join-membership h2 { margin: 0 0 8px; font-size: clamp(25px, 3.2vw, 34px); letter-spacing: -.045em; }
+.join-membership p:last-child { margin: 0; color: #64736a; font-size: 14px; }
+
+.form-picker .charter-header { margin-bottom: 40px; }
+.form-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.form-option { display: flex; flex-direction: column; align-items: flex-start; padding: 26px; border: 1px solid var(--line); background: rgba(255, 254, 250, .68); }
+.form-option .eyebrow { margin-bottom: 12px; color: #718078; }
+.form-option h2 { margin: 0 0 12px; font-size: 22px; letter-spacing: -.035em; }
+.form-option p:not(.eyebrow) { margin: 0 0 18px; color: #64736a; font-size: 13px; line-height: 1.7; }
+.form-option .button { margin-top: auto; }
+.form-back-button { margin-top: 28px; border-color: var(--line); color: var(--green); }
+
+@media (max-width: 720px) {
+  .charter { width: calc(100% - 40px); padding-top: 48px; padding-bottom: 64px; }
+  .charter-header { margin-bottom: 40px; }
+  .charter-section { margin-top: 24px; padding: 22px 16px; }
+  .fee-notes { grid-template-columns: 1fr; }
+  .join-membership { align-items: flex-start; flex-direction: column; margin-top: 24px; padding: 22px 16px; }
+  .form-options { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 430px) {
+  .charter { width: calc(100% - 32px); }
+  .charter-header h1 { font-size: 42px; }
+}
